@@ -1,0 +1,114 @@
+# simple Calculator 
+
+import math
+
+print("========== ADVANCED CALCULATOR ==========")
+
+while True:
+
+    print("\nChoose an operation:")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+    print("5. Modulus (%)")
+    print("6. Power (x^y)")
+    print("7. Square Root")
+    print("8. Factorial")
+    print("9. Sine")
+    print("10. Cosine")
+    print("11. Tangent")
+    print("12. Logarithm")
+    print("13. Exit")
+
+    choice = input("\nEnter your choice (1-13): ")
+
+    # Addition
+    if choice == '1':
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result =", a + b)
+
+    # Subtraction
+    elif choice == '2':
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result =", a - b)
+
+    # Multiplication
+    elif choice == '3':
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result =", a * b)
+
+    # Division
+    elif choice == '4':
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+
+        if b != 0:
+            print("Result =", a / b)
+        else:
+            print("Error! Division by zero is not allowed.")
+
+    # Modulus
+    elif choice == '5':
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result =", a % b)
+
+    # Power
+    elif choice == '6':
+        a = float(input("Enter base number: "))
+        b = float(input("Enter power: "))
+        print("Result =", a ** b)
+
+    # Square Root
+    elif choice == '7':
+        a = float(input("Enter a number: "))
+
+        if a >= 0:
+            print("Square Root =", math.sqrt(a))
+        else:
+            print("Error! Negative number not allowed.")
+
+    # Factorial
+    elif choice == '8':
+        a = int(input("Enter a number: "))
+
+        if a >= 0:
+            print("Factorial =", math.factorial(a))
+        else:
+            print("Error! Negative number not allowed.")
+
+    # Sine
+    elif choice == '9':
+        angle = float(input("Enter angle in degrees: "))
+        print("Sin =", math.sin(math.radians(angle)))
+
+    # Cosine
+    elif choice == '10':
+        angle = float(input("Enter angle in degrees: "))
+        print("Cos =", math.cos(math.radians(angle)))
+
+    # Tangent
+    elif choice == '11':
+        angle = float(input("Enter angle in degrees: "))
+        print("Tan =", math.tan(math.radians(angle)))
+
+    # Logarithm
+    elif choice == '12':
+        a = float(input("Enter a number: "))
+
+        if a > 0:
+            print("Log =", math.log10(a))
+        else:
+            print("Error! Logarithm only for positive numbers.")
+
+    # Exit
+    elif choice == '13':
+        print("Thank you for using the calculator!")
+        break
+
+    else:
+        print("Invalid choice! Please enter a number between 1 and 13.")
