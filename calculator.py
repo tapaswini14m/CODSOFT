@@ -5,7 +5,6 @@
 # =========================================
 #       SCIENTIFIC CALCULATOR IN PYTHON
 # =========================================
-
 from tkinter import *
 import math
 
